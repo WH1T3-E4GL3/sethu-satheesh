@@ -141,6 +141,15 @@ article {
   z-index: 1;
 }
 
+marquee {
+  color: white;
+  /* background-color: black; */
+  font-size: 13px;
+  padding: 20px;
+  /* display: block; */
+  /* width: 100%; */
+}
+
 .separator {
   width: 100%;
   height: 1px;
@@ -258,7 +267,18 @@ article.active {
   z-index: -1;
 }
 
+.marqueeContainer {
+  display: flex;
+  border-bottom: 2px solid var(--eerie-black-2);
 
+}
+
+.textContainer {
+  color: white;
+  width: 250px;
+  padding: 20px;
+  background-color: var(--eerie-black-2);
+}
 
 /*-----------------------------------*\
   #MAIN
