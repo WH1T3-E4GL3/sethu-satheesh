@@ -147,3 +147,33 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Function to fetch user IP and update marquee
+function fetchUserInfo() {
+  fetch('https://ipinfo.io/json')
+    .then(response => response.json())
+    .then(data => {
+      const ip = data.ip || 'Not available';
+      const city = data.city || 'Not available';
+      const region = data.region || 'Not available';
+      const country = data.country || 'Not available';
+      const location = `${city}, ${region}, ${country}`;
+      const org = data.org || 'Not available'; // ISP information
+      const postal = data.postal || 'Not available';
+      const timezone = data.timezone || 'Not available';
+
+      // Browser and system information (not available from IP API, requires user-agent parsing)
+      const browserInfo = navigator.userAgent;
+      const systemInfo = navigator.platform;
+
+      // Display IP and additional information
+      document.getElementById('infoMarquee').textContent = `IP Address: ${ip} | Location: ${location} | ISP: ${org} | Postal Code: ${postal} | timezone: ${timezone}  |Browser: ${browserInfo} | System: ${systemInfo}`;
+    })
+    .catch(error => {
+      console.error('Error fetching user information:', error);
+      document.getElementById('infoMarquee').textContent = 'Failed to load information.';
+    });
+}
+
+// Fetch user information on page load
+document.addEventListener('DOMContentLoaded', fetchUserInfo);
