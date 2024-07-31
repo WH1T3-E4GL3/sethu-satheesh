@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
 
   --bg-gradient-onyx: linear-gradient(
@@ -46,7 +48,7 @@
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
 
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-poppins: 'Space Mono', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
