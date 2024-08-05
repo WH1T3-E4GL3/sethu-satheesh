@@ -764,6 +764,25 @@ main {
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
+.download-conntainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.download-icon {
+  width: 20px;
+  height: 20px; 
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+ 
+}
+
+.download-icon:hover {
+  color: blue;  
+  transform: scale(1.17);
+  
+}
 
 .article-title {
   margin-bottom: 30px;
